@@ -7,11 +7,11 @@ Included Files:
 
 tacky.aik - assembler specification for Dr. Dietz's AIK tool(http://aggregate.org/EE480/assembler.html), used to specify an assembly language
 
-a2final.v - Verilog implementation of an assembly language for our processor designs, built using an opcode requirements from Dr. Dietz
+a2final.v - first processor implementation, includes floating-point arithmetic(implementation provided by Dr. Dietz)
 
-a2TextSuite.txt - simple verilog program to test the assembly language in a2final.v
+a2TextSuite.txt - simple verilog program to test the processor in a2final.v
 
-a3tacky.v - first processor implementation: twin-accumulator pipelined processor with RAW and WAR dependency handling
+a3tacky.v - second processor implementation: twin-accumulator pipelined processor with RAW and WAR dependency handling
 
 a3TestSuite.txt - edit of a2TextSuite.txt to add tests for RAW/WAR dependencies
 
