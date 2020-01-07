@@ -4,6 +4,7 @@ Team Projects I worked on in Advanced Microcomputer Architecture @ UK, Dr. Dietz
 This course was centered on teams of students building and iterating upon a processor architecture in Verilog. For each new assignment, the team members were shuffled, so that we were always working with new people, and experience from each previous team's implementations could be synthesized into the next implementation.
 
 Included Files:
+
 tacky.aik - assembler specification for Dr. Dietz's AIK tool(http://aggregate.org/EE480/assembler.html), used to specify an assembly language
 
 a2final.v - Verilog implementation of an assembly language for our processor designs, built using an opcode requirements from Dr. Dietz
