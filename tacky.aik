@@ -1,0 +1,16 @@
+.Eight $r := .this:5 r:3 ;generic 8bit opcode, 1 arg
+.Eight $r0 , .Eight $r1 := .this:5 r0:3 .Eight:5 r1:3 ;2 8bit opcodes together
+;alias to all 17 8bit opcodes, .this=0-16
+.alias .Eight a2r add and cvt div jr lf li mul not or r2a sh slt st sub xor
+.SixteenTwo $r,imm := imm:8 r:3 .this:5 ;16bit opcode with 1 reg and 1 imm arg
+.alias .SixteenTwo 17 cf8 ci8 jnz8 jz8 ;alias to the 4 opcodes, .this=17-20
+jp8 imm := imm:8 0:3 21:5 ;jp8, opcode 21, formatted with imm first for later macro
+.SixteenImm imm := .this:5 0:3 imm:8  ;16bit opcode with 1 imm arg
+.alias .SixteenImm 22 pre sys ;alias to the 2 opcodes, .this=22 or 23
+;following macro spec hard codes the opcode for pre, then matches after
+.MacroTwo $r,imm := 22:5 0:3 imm:16 r:3 .this 5 ;macro with 1 reg and 1 imm arg
+.alias .MacroTwo 17 cf ci jnz jz ;alias with same .this as corresponding .SixteenTwo opcodes
+jp addr := 22:5 0:3 addr:16 0:3 21:5 ;hardcoded as sequence 'pre addr[upper8] jp8 addr[lower8]'
+.const r0 r1 r2 r3 r4 ra rv sp ;registers
+.segment .text 16 0x10000 0 .VMEM ;segment defs
+.segment .data 16 0x10000 0 .VMEM
