@@ -5,9 +5,15 @@ This course was centered on teams of students building and iterating upon a proc
 
 Included Files:
 tacky.aik - assembler specification for Dr. Dietz's AIK tool(http://aggregate.org/EE480/assembler.html), used to specify an assembly language
+
 a2final.v - Verilog implementation of an assembly language for our processor designs, built using an opcode requirements from Dr. Dietz
+
 a2TextSuite.txt - simple verilog program to test the assembly language in a2final.v
+
 a3tacky.v - first processor implementation: twin-accumulator pipelined processor with RAW and WAR dependency handling
+
 a3TestSuite.txt - edit of a2TextSuite.txt to add tests for RAW/WAR dependencies
+
 tacky.v - final processor implementation, includes function load and store instructions, both to/from a fast cache and a slow RAM.
+
 testProgram.tacky - final testing suite, added tests for cache and RAM load/stores, and dependencies for each
